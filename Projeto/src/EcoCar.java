@@ -6,7 +6,7 @@ public class EcoCar implements Car {
     }
 
     @Override
-    public double getPrice(double km) {
-        return 1.0 * km;
+    public double getPrice(double price, double km) {
+        return price * km;
     }
 }
