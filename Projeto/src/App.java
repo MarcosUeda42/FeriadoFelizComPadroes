@@ -24,5 +24,9 @@ public class App {
 
         new CreateRun().createLuxStop(config.getPriceLux());
 
+        System.out.println("\n");
+
+        new CreateRun().createEcoCheap(config.getPriceEco());
+
     }
 }

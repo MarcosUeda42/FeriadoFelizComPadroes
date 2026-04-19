@@ -81,4 +81,21 @@ public class CreateRun {
         carStop.startRun();
         System.out.println("Preço da viagem: " + carStop.getPrice(price, 100) + " reais");
     }
+
+    public void createEcoCheap(double price) {
+
+        AdaptGPSGoogle google = new AdaptGPSGoogle(new GoogleMaps());
+        GPSSystem system = new GPSSystem();
+
+        CarSearch cs = new CarSearch();
+        cs.setStrategy(new CheapSearch());
+        CarSearchProxy proxy = new CarSearchProxy(cs);
+
+        Car car1 = CarFactory.createCar("eco");
+
+        proxy.getCar("eco");
+        system.initGPS(google);
+        car1.startRun();
+        System.out.println("Preço da viagem: " + car1.getPrice(price, 100) + " reais");
+    }
 }
