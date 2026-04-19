@@ -31,4 +31,37 @@ public class CreateRun {
         car1.startRun();
         System.out.println("Preço da viagem: " + car1.getPrice(price, 100) + " reais");
     }
+
+    
+    public void createLuxWaze(double price) {
+
+        AdaptGPSWaze waze = new AdaptGPSWaze(new Waze());
+        GPSSystem system = new GPSSystem();
+
+        CarSearch cs = new CarSearch();
+        CarSearchProxy proxy = new CarSearchProxy(cs);
+
+        Car car1 = CarFactory.createCar("eco");
+
+        proxy.getCar("eco");
+        system.initGPS(waze);
+        car1.startRun();
+        System.out.println("Preço da viagem: " + car1.getPrice(price, 100) + " reais");
+    }
+
+    public void createEcoWaze(double price) {
+
+        AdaptGPSWaze waze = new AdaptGPSWaze(new Waze());
+        GPSSystem system = new GPSSystem();
+
+        CarSearch cs = new CarSearch();
+        CarSearchProxy proxy = new CarSearchProxy(cs);
+
+        Car car1 = CarFactory.createCar("eco");
+
+        proxy.getCar("eco");
+        system.initGPS(waze);
+        car1.startRun();
+        System.out.println("Preço da viagem: " + car1.getPrice(price, 100) + " reais");
+    }
 }
