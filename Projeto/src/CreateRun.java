@@ -41,9 +41,9 @@ public class CreateRun {
         CarSearch cs = new CarSearch();
         CarSearchProxy proxy = new CarSearchProxy(cs);
 
-        Car car1 = CarFactory.createCar("eco");
+        Car car1 = CarFactory.createCar("lux");
 
-        proxy.getCar("eco");
+        proxy.getCar("lux");
         system.initGPS(waze);
         car1.startRun();
         System.out.println("Preço da viagem: " + car1.getPrice(price, 100) + " reais");
