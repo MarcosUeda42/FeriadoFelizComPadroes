@@ -20,5 +20,9 @@ public class App {
 
         new CreateRun().createEcoWaze(config.getPriceEco());
 
+        System.out.println("\n");
+
+        new CreateRun().createLuxStop(config.getPriceLux());
+
     }
 }
