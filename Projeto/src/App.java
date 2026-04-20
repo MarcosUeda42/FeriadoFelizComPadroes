@@ -2,6 +2,8 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         GlobalConfig config = GlobalConfig.getInstance();
+        config.addObserver(new PriceLux());
+        config.addObserver(new PriceEco());
         
         new CreateRun().createLuxGoogle(config.getPriceLux());
         
@@ -13,12 +15,18 @@ public class App {
 
         config.setPriceLux(3.0);
         config.setPriceEco(1.5);
+
+        System.out.println("\n");
         
         new CreateRun().createLuxWaze(config.getPriceLux());
 
         System.out.println("\n");
 
         new CreateRun().createEcoWaze(config.getPriceEco());
+
+        System.out.println("\n");
+
+        config.setPriceEco(1);
 
         System.out.println("\n");
 

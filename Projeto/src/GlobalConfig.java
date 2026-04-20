@@ -1,4 +1,4 @@
-public class GlobalConfig {
+public class GlobalConfig extends Subject {
     
     private static GlobalConfig instance;
 
@@ -27,11 +27,11 @@ public class GlobalConfig {
 
     public void setPriceEco(double priceEco) {
         this.priceEco = priceEco;
-        System.out.println("Preço setado para carro normal: " + priceEco + " reais por km");
+        notifyObserversEco();
     }
 
     public void setPriceLux(double priceLux) {
         this.priceLux = priceLux;
-        System.out.println("Preço setado para carro luxuoso: " + priceLux + " reais por km");
+        notifyObserversLux();
     }
 }
